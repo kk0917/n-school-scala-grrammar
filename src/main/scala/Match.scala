@@ -60,8 +60,7 @@ object Match {
       val chars: Seq[Char] = new scala.util.Random(new java.security.SecureRandom()).alphanumeric.take(5).toList
 
       val result = chars match {
-        case c: Seq[_] if c(0) == c(4) => c
-        case _ => "Nothing..."
+        case Seq(a, b, c, d, _) => Seq(a, b, c, d, a)
       }
 
       println(result)
