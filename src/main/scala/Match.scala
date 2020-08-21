@@ -55,6 +55,7 @@ object Match {
     }
   }
 
+  // beginner's chalenge!
   def printRandomChars(): Unit = {
     for (i <- 1 to 1000) {
       val chars: Seq[Char] = new scala.util.Random(new java.security.SecureRandom()).alphanumeric.take(5).toList
@@ -64,6 +65,22 @@ object Match {
       }
 
       println(result)
+    }
+  }
+
+  // intermediate's chalenge!
+  def last(seq: Seq[Int]): Int = {
+    seq match {
+      case Seq(x) => return x
+      case x::xs => last(xs)
+    }
+  }
+
+  // Senior's chalenge
+  def reverse(seq: Seq[Int]): Seq[Int] = {
+    seq match {
+      case Seq(x) => Seq(x)
+      case x::xs => reverse(xs) :+ x
     }
   }
 }
