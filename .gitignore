@@ -1,0 +1,6 @@
+# idea conf files
+.idea
+*.iml
+
+# building
+target
