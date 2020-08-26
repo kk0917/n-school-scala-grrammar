@@ -105,9 +105,9 @@ abstract class Creature(
     target.hitPoint -= this.attackDamage
   }
 
-  // TODO: add avoid attacks
+  // TODO: add action avoiding from attacks
 
-  // TODO: add defence attacks
+  // TODO: add action defencing from attacks
 }
 
 class Hero(
@@ -126,6 +126,8 @@ class Hero(
   override def toString =
     s"${name}(体力:${if (hitPoint > 0) hitPoint else 0}, 攻撃力:${attackDamage})"
 }
+
+// TODO: add monster type and create classes for each monster type
 
 class Monster(
   _hitPoint:     Int,
